@@ -102,7 +102,7 @@ Using any or all of the following methods to optimize your model:
     * The variables `EIN` and `NAME` were removed from the data as they were neither targets or features.
 
 * Compiling, Training, and Evaluating the Model
-    * I began with three hidden layers with 86, 43, and 43 neurons. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+    * I began with three hidden layers with 86, 43, and 43 neurons. I chose these values based on the shape of the dataset.
     * Although close, I wasn't able to reach the 75% goal.
     * After a few different trials with varying numbers of hidden layers and neurons, I used the Keras Tuner in an attempt to find the ideal model parameters. However, the best model produced was still a bit short of the goal, 73%.
 
