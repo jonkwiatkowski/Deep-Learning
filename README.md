@@ -92,30 +92,27 @@ Using any or all of the following methods to optimize your model:
 
 5. Save and export your results to an HDF5 file. Name the file `AlphabetSoupCharity_Optimization.h5`.
 
-### Step 4: Write a Report on the Neural Network Model
+## Results
 
-For this part of the assignment, you’ll write a report on the performance of the deep learning model you created for AlphabetSoup.
-
-The report should contain the following:
-
-1. **Overview** of the analysis: Explain the purpose of this analysis.
-
-2. **Results**: Using bulleted lists and images to support your answers, address the following questions.
-
-  * Data Preprocessing
-    * What variable(s) are the target(s) for your model?
-    * What variable(s) are the features for your model?
-    * What variable(s) should be removed from the input data because they are neither targets nor features?
+* Data Preprocessing
+    * Target variable: IS_SUCCESSFUL
+    * Features: `APPLICATION_TYPE`, `AFFILIATION`, `CLASSIFICATION`, `USE_CASE`, `ORGANIZATION`, `STATUS`, `INCOME_AMT`, `SPECIAL_CONSIDERATIONS`, and `ASK_AMT`.
+    * The variables `EIN` and `NAME` were removed from the data as they were neither targets or features.
 
 * Compiling, Training, and Evaluating the Model
-    * How many neurons, layers, and activation functions did you select for your neural network model, and why?
-    * Were you able to achieve the target model performance?
-    * What steps did you take in your attempts to increase model performance?
+    * I began with three hidden layers with 86, 43, and 43 neurons. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+    * Although close, I wasn't able to reach the 75% goal.
+    * After a few different trials with varying numbers of hidden layers and neurons, I used the Keras Tuner in an attempt to find the ideal model parameters. However, the best model produced was still a bit short of the goal, 73%.
 
-3. **Summary**: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+## Summary
+
+Overall, the model performed well, about 72.3%, but didn't quite reach the goal of 75%. The Keras Tuner still produced a model that performed at about 73%. For further analysis, I'd recommend removing additional features or even trying to include the `NAME` or the `EIN` column.
+
 
 - - -
 
 ## References
 
 * Assignment 21 Instructions
+* https://realpython.com/python-lambda/
+* https://pandas.pydata.org/docs/reference/api/pandas.get_dummies.html
