@@ -1,7 +1,4 @@
-# deep-learning-challenge
-My submission for Assignment 21.
-
-# Report
+# Deep Learning
 
 ## Background
 
